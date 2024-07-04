@@ -1,3 +1,4 @@
+import { DetailsGame } from "./detailsGame.module.js";
 import { Ui } from "./ui.module.js";
 
 export class Home{
@@ -34,12 +35,24 @@ try{
       const response = await apiGames.json();
       console.log(response);
       this.ui.displayGame(response);
-}catch{
-    console.log(error);
-}
+          document.querySelectorAll('.card').forEach((ele)=>{
+        ele.addEventListener('click',()=>{
+      document.querySelector('#gamesDetails').classList.remove('d-none')
+     document.querySelector('#home').classList.add('d-none')
+     const id=ele.getAttribute('data-id')
+    this.DetailsGame=new DetailsGame(id);
+    })})
+    }catch{
+console.log('error');
+     }
+
+     
+    }
+        
+
       
 
-};
+
         
        
-    }
+}

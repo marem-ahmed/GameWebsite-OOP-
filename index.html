@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- bootstrap css sheet -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <!-- fontawesome css -->
+
+    <link rel="stylesheet" href="css/all.min.css">
   </head>
   <body>
     <section class="">
@@ -94,7 +97,7 @@
         </div>
       </nav>
 
-      <div class="container my-5 home">
+      <div class="container my-5 home" id="home">
         <div class="position-relative">
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4" id="data">
 
@@ -103,13 +106,15 @@
       </div>
 
     </section>
-    <section class="d-none details">
-<div class="contanier">
+    <section class="d-none details" id="gamesDetails">
+<div class="container">
     <header>
         <h1 class="py-4 text-center"> Details Game</h1>
-        <button class="btn" id="btnClose"></button>
+        <button class="btn btn-close d-flex ml-auto my-2" id="btnClose"><i class="fa-solid fa-xmark"></i></button>
     </header>
-    <div class="g-4 row" id="detailsText"></div>
+    <div class="g-4 row" id="detailsText">
+
+    </div>
 
 </div>
 <div class="d-none ">
